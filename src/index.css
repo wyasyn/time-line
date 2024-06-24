@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 226 43% 10%;
+    --foreground: 236 100% 87%;
+    --profile: 246 80% 60%;
+    --card: 235 46% 20%;
+    --hover: 235 45% 61%;
+    --rubik: "Rubik", sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-rubik;
+  }
+  ::-webkit-scrollbar {
+    @apply w-[0.725rem];
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-hover;
+  }
+}
